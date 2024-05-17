@@ -1,9 +1,6 @@
 # CleverFIT
 
-## Инструкция к спринту №4 https://docs.google.com/document/d/1xojqpmhGZOsrwH977xSxUjzDtKDt7t6sRdUBfv5JI7c/edit?usp=sharing
-
-## Сыылка на проект Figma: https://www.figma.com/file/8FGrAaiG3waYxeRHNuskHB/maraphon-2024?type=design&node-id=3-11940&mode=design 
-## password: MARAPHON_frontend_2024
+## Инструкция для спринта №1: https://docs.google.com/document/d/14v92-ZOTfr2T-OFEifcDRWfJBPf_CL3KfV-rFbUNRqQ/edit?usp=sharing
 
 ## Установка Node.js, npm, nvm, Yarn
 
@@ -49,33 +46,7 @@
 | `nvm -v`                                   | `Выведет установленную версию nvm`     |
 | `yarn -v`                                  | `Выведет установленную версию Yarn`    |
 
----
-
-#### 3. Установка и запуска проекта
-
-| Установка и запуска проекта | Описание                                                                        |
-| --------------------------- | ------------------------------------------------------------------------------- |
-| `nvm install 20.10.0`       | `Установить версию Node.js 20.10.0 с использованием Node Version Manager (nvm)` |
-| `nvm use 20.10.0`           | `Активировать установленную версию Node.js 20.10.0`                             |
-| `yarn install`              | `Установить зависимости проекта с помощью Yarn`                                 |
-| `yarn start`                | `Запустить проект`                                                              |
-
----
-
-| Основные команды    | Описание                               |
-| ------------------- | -------------------------------------- |
-| `yarn start`        | `Запуск проекта`                       |
-| `yarn build`        | `Сборка проекта`                       |
-| `yarn lint:css`     | `Запуск stylelint для css файлов`      |
-| `yarn lint:scripts` | `Запуск eslint для ts(x)/js(x) файлов` |
-| `yarn lint`         | `Запуск stylelint и eslint`            |
-| `yarn cy:e2e`       | `Запуск e2e тестов cypress`            |
-
----
-
-#### Прекоммитные проверки
-
-В этом проекте используются прекоммитные проверки, настроенные через [lint-staged](https://classic.yarnpkg.com/en/package/lint-staged). Они автоматически проверяют и форматируют изменения перед коммитом.
+перед коммитом.
 
 **Как это работает:**
 
@@ -152,3 +123,31 @@ docs: update description of run() method
 ```
 
 ---
+
+---
+
+#### 3. Установка и запуска проекта
+
+| Установка и запуска проекта | Описание                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------- |
+| `nvm install 20.10.0`       | `Установить версию Node.js 20.10.0 с использованием Node Version Manager (nvm)` |
+| `nvm use 20.10.0`           | `Активировать установленную версию Node.js 20.10.0`                             |
+| `yarn install`              | `Установить зависимости проекта с помощью Yarn`                                 |
+| `yarn start`                | `Запустить проект`                                                              |
+
+---
+
+| Основные команды    | Описание                               |
+| ------------------- | -------------------------------------- |
+| `yarn start`        | `Запуск проекта`                       |
+| `yarn build`        | `Сборка проекта`                       |
+| `yarn lint:css`     | `Запуск stylelint для css файлов`      |
+| `yarn lint:scripts` | `Запуск eslint для ts(x)/js(x) файлов` |
+| `yarn lint`         | `Запуск stylelint и eslint`            |
+| `yarn cy:e2e`       | `Запуск e2e тестов cypress`            |
+
+---
+
+#### Прекоммитные проверки
+
+В этом проекте используются прекоммитные проверки, настроенные через [lint-staged](https://classic.yarnpkg.com/en/package/lint-staged). Они автоматически проверяют и форматируют изменения
