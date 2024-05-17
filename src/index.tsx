@@ -8,8 +8,8 @@ import {MainPage} from './pages';
 
 import 'normalize.css';
 import './index.css';
-import {Test} from "@pages/main-page/mainContent/sidebar/Test.tsx";
 import {Blogs} from "@pages/main-page/mainContent/blogs/blogs.tsx";
+import {Posts} from "@pages/main-page/mainContent/posts/Posts.tsx";
 
 const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
@@ -20,7 +20,7 @@ root.render(
             <HashRouter>
                 <Routes>
                     <Route path='/' element={<MainPage/>}>
-                        <Route path={'/posts'} element={<Test/>}></Route>
+                        <Route path={'/posts'} element={<Posts/>}></Route>
                         <Route path={'/blogs'} element={<Blogs/>}></Route>
                     </Route>
                 </Routes>
