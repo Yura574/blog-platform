@@ -1,5 +1,7 @@
+import header from './header.module.scss'
+
 export const Header = () => {
     return (
-        <div>Blog platform</div>
+        <div className={header.header}>Blog platform</div>
     )
 }

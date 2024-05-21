@@ -1,0 +1,30 @@
+@import "../../../../style/color";
+
+
+.layout{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: $mainColor;
+    padding: 29px 0 7px 0;
+    border-bottom: 1px solid $gray;
+}
+
+.searchField{
+    display: flex;
+    margin-top: 23px;
+}
+
+.select{
+    min-width: 256px ;
+    margin: 0 64px 0 12px;
+}
+
+.anticon {
+    color: rgba(173, 171, 172, 1);
+}

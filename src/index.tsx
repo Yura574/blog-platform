@@ -8,6 +8,7 @@ import {MainPage} from './pages';
 
 import 'normalize.css';
 import './index.css';
+import './reset.css';
 import {Blogs} from "@pages/main-page/mainContent/blogs/blogs.tsx";
 import {Posts} from "@pages/main-page/mainContent/posts/Posts.tsx";
 
