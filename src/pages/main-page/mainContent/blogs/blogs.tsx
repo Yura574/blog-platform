@@ -1,6 +1,7 @@
 import blog from './blogs.module.scss'
 import {Input, Select} from "antd";
 import {SearchOutlined} from "@ant-design/icons";
+import noIcon from '../../../../assets/svg/noIcon.svg'
 
 
 export const Blogs = () => {
@@ -23,30 +24,32 @@ export const Blogs = () => {
             </div>
 
             <div>
-                <div>
-                    <img src="" alt=""/>
-                    <div>title</div>
-                    <div>website</div>
-                    <div>description</div>
+
+                <div className={blog.blogWrapper}>
+                    <div className={blog.imgWrapper}><img src={noIcon} className={blog.img} alt="icon"/></div>
+                    <div>
+                        <div className={blog.blogTitle}>Title</div>
+                        <div className={blog.website}>Website</div>
+                        <div className={blog.description}>description</div>
+                    </div>
                 </div>
-                <div>
-                    <img src="" alt=""/>
-                    <div>title</div>
-                    <div>website</div>
-                    <div>description</div>
+                <div className={blog.blogWrapper}>
+                    <div className={blog.imgWrapper}><img src={noIcon} className={blog.img} alt="icon"/></div>
+                    <div>
+                        <div className={blog.blogTitle}>Title</div>
+                        <div className={blog.website}>Website</div>
+                        <div className={blog.description}>description</div>
+                    </div>
                 </div>
-                <div>
-                    <img src="" alt=""/>
-                    <div>title</div>
-                    <div>website</div>
-                    <div>description</div>
+                <div className={blog.blogWrapper}>
+                    <div className={blog.imgWrapper}><img src={noIcon} className={blog.img} alt="icon"/></div>
+                    <div>
+                        <div className={blog.blogTitle}>Title</div>
+                        <div className={blog.website}>Website</div>
+                        <div className={blog.description}>description</div>
+                    </div>
                 </div>
-                <div>
-                    <img src="" alt=""/>
-                    <div>title</div>
-                    <div>website</div>
-                    <div>description</div>
-                </div>
+
             </div>
         </div>
     )
