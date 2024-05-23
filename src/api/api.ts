@@ -1,10 +1,10 @@
 import axios from "axios";
-import {GetBlogsParamsType} from "./apiTypes.ts";
+import {GetBlogsParamsType, GetPostsParamsType} from "./apiTypes.ts";
 
 
 
 
-const baseURL = 'https://homework-backend.vercel.app/'
+const baseURL = 'https://f4701f78130833e39461b07fecd3c4a0.serveo.net'
 
 const instance = axios.create({
     baseURL,
@@ -16,8 +16,15 @@ const instance = axios.create({
 
 export const blogsApi = {
     getAllBlogs: (params: GetBlogsParamsType)=> {
-        const {pageSize, pageNumber, sortBy, sortDirection, searchNameTerm} = params
-        return instance.get(`/blogs?pageSize=${pageSize}&pageNumber=${pageNumber}&sortBy=${sortBy}&sortDirection=${sortDirection}&searchNameTerm=${searchNameTerm}`)
+        const {pageSize, pageNumber, sortBy, sortDirection,} = params
+        return instance.get(`/blogs?pageSize=${pageSize}&pageNumber=${pageNumber}&sortBy=${sortBy}&sortDirection=${sortDirection}`)
+    }
+}
+
+export const postsApi = {
+    getAllPosts: (params: GetPostsParamsType)=> {
+        const {pageSize, pageNumber, sortBy, sortDirection} = params
+        return instance.get(`/posts?pageSize=${pageSize}&pageNumber=${pageNumber}&sortBy=${sortBy}&sortDirection=${sortDirection}`)
     }
 }
 

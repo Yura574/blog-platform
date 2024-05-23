@@ -15,3 +15,5 @@ const commonSlice = createSlice({
     }
 })
 
+export const {setIsPending} = commonSlice.actions
+export const commonReducer = commonSlice.reducer
