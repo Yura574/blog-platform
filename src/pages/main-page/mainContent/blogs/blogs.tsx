@@ -15,7 +15,7 @@ export const Blogs = () => {
     useEffect(()=> {
         dispatch(getBlogsThunk())
     }, [])
-    const blogs = useAppSelector(state => state.blogReducer.blogs)
+    const blogs = useAppSelector(state => state.blogs.blogs)
     return (
         <div className={blogStyle.layout}>
             <div className={blogStyle.title}>Blogs</div>

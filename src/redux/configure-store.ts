@@ -5,9 +5,9 @@ import {postReducer} from "@redux/reducers/post-reducer.ts";
 
 export const store = configureStore({
     reducer: {
-        blogReducer,
-        postReducer,
-        commonReducer,
+        blogs:blogReducer,
+        posts:postReducer,
+        common: commonReducer,
     },
 });
 

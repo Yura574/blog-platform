@@ -11,7 +11,7 @@ import {NavLink} from "react-router-dom";
 export const Posts = () => {
 
     const dispatch = useAppDispatch()
-    const posts = useAppSelector(state => state.postReducer.posts)
+    const posts = useAppSelector(state => state.posts.posts)
 
     useEffect(() => {
         dispatch(getPostsThunk())
@@ -28,7 +28,7 @@ export const Posts = () => {
             <div className={postStyle.postsWrapper}>
                 {posts.map((post) => {
                     return (
-                        <NavLink to={`${post.id}`} className={postStyle.postWrapper}>
+                        <NavLink to={`${post.id}`} className={postStyle.postWrapper} key={post.id}>
                             <div>
                                 <div className={postStyle.imgWrapper}><img src={notImg} alt="as"/>
                                 </div>

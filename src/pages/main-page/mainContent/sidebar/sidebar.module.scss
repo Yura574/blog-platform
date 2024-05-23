@@ -18,6 +18,7 @@
 }
 .activeNavlink {
     color: $activeColor;
+    border-right: 1px solid $activeColor;
     & svg {
         fill: currentColor;
     }

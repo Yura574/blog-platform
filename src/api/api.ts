@@ -25,6 +25,9 @@ export const postsApi = {
     getAllPosts: (params: GetPostsParamsType)=> {
         const {pageSize, pageNumber, sortBy, sortDirection} = params
         return instance.get(`/posts?pageSize=${pageSize}&pageNumber=${pageNumber}&sortBy=${sortBy}&sortDirection=${sortDirection}`)
+    },
+    getPostById: (id: string)=> {
+        return instance.get(`/posts/${id}`)
     }
 }
 
