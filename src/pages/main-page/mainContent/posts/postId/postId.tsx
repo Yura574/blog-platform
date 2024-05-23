@@ -4,7 +4,7 @@ import notImg from '../../../../../assets/svg/noIcon.svg'
 import {useAppDispatch, useAppSelector} from "@hooks/typed-react-redux-hooks.ts";
 import {useEffect} from "react";
 import {getPostByIdThunk} from "@redux/reducers/post-reducer.ts";
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 
 
 export const PostId = () => {
@@ -20,7 +20,7 @@ export const PostId = () => {
         <div className={blogCSS.layout}>
             <h2 className={blogCSS.title}>Posts</h2>
 
-            <div className={postStyle.backToPosts}>
+            <NavLink to={'/posts'} className={postStyle.backToPosts}>
                 <div className={postStyle.arrowWrapper}>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@ export const PostId = () => {
                     </svg>
                 </div>
                 Back to posts
-            </div>
+            </NavLink>
 
             <div className={postStyle.postWrapper}>
                 <div className={postStyle.blogDescription}>

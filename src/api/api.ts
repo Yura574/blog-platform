@@ -2,8 +2,6 @@ import axios from "axios";
 import {GetBlogsParamsType, GetPostsParamsType} from "./apiTypes.ts";
 
 
-
-
 const baseURL = 'https://f4701f78130833e39461b07fecd3c4a0.serveo.net'
 
 const instance = axios.create({
@@ -15,18 +13,24 @@ const instance = axios.create({
 })
 
 export const blogsApi = {
-    getAllBlogs: (params: GetBlogsParamsType)=> {
+    getAllBlogs: (params: GetBlogsParamsType) => {
         const {pageSize, pageNumber, sortBy, sortDirection,} = params
         return instance.get(`/blogs?pageSize=${pageSize}&pageNumber=${pageNumber}&sortBy=${sortBy}&sortDirection=${sortDirection}`)
+    },
+    getBlogById: (id: string) => {
+        return instance.get(`/blogs/${id}`)
+    },
+    getPostsForBlog: (id: string) => {
+        return instance.get(`/blogs/${id}/posts`)
     }
 }
 
 export const postsApi = {
-    getAllPosts: (params: GetPostsParamsType)=> {
+    getAllPosts: (params: GetPostsParamsType) => {
         const {pageSize, pageNumber, sortBy, sortDirection} = params
         return instance.get(`/posts?pageSize=${pageSize}&pageNumber=${pageNumber}&sortBy=${sortBy}&sortDirection=${sortDirection}`)
     },
-    getPostById: (id: string)=> {
+    getPostById: (id: string) => {
         return instance.get(`/posts/${id}`)
     }
 }

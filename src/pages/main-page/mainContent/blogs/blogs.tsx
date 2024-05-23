@@ -5,6 +5,7 @@ import noIcon from '../../../../assets/svg/noIcon.svg'
 import {useEffect, useState} from "react";
 import {getBlogsThunk} from "@redux/reducers/blog-reducer.ts";
 import {useAppDispatch, useAppSelector} from "@hooks/typed-react-redux-hooks.ts";
+import {NavLink} from "react-router-dom";
 
 
 export const Blogs = () => {
@@ -36,14 +37,14 @@ export const Blogs = () => {
             <div className={blogStyle.blogsWrapper}>
                 {blogs.map((blog)=> {
                     return (
-                        <div className={blogStyle.blogWrapper} key={blog.id}>
+                        <NavLink to={blog.id} className={blogStyle.blogWrapper} key={blog.id}>
                             <div className={blogStyle.imgWrapper}><img src={noIcon} alt="icon"/></div>
                             <div>
                                 <div className={blogStyle.blogTitle}>{blog.name}</div>
                                 <div className={blogStyle.website}>{blog.websiteUrl}</div>
                                 <div className={blogStyle.description}>{blog.description}</div>
                             </div>
-                        </div>
+                        </NavLink>
                     )
                 })}
 

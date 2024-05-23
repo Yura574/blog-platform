@@ -1,30 +1,22 @@
-import {Select} from "antd";
-import blogCSS from '../blogs/blogs.module.scss'
-import postStyle from './posts.module.scss'
-import notImg from '../../../../assets/svg/noIcon.svg'
+import postStyle from "@pages/main-page/mainContent/posts/posts.module.scss";
+import {NavLink} from "react-router-dom";
+import notImg from "../../../../../assets/svg/noIcon.svg";
 import {useAppDispatch, useAppSelector} from "@hooks/typed-react-redux-hooks.ts";
 import {useEffect} from "react";
-import {getPostsThunk} from "@redux/reducers/post-reducer.ts";
-import {NavLink} from "react-router-dom";
+import {getPostsForBlog} from "@redux/reducers/blog-reducer.ts";
+import {Button} from "antd";
 
 
-export const Posts = () => {
-
+export const PostsForBlogs = ({blogId}: { blogId?: string }) => {
     const dispatch = useAppDispatch()
-    const posts = useAppSelector(state => state.posts.posts)
-
+    const posts = useAppSelector(state => state.blogs.posts)
+    console.log(123)
     useEffect(() => {
-        dispatch(getPostsThunk())
+        console.log(blogId)
+        blogId && dispatch(getPostsForBlog(blogId))
     }, [])
     return (
-        <div className={blogCSS.layout}>
-            <h2 className={blogCSS.title}>Posts</h2>
-            <div className={postStyle.searchField}>
-                <Select defaultValue={'asc'} options={[
-                    {value: 'asc', label: 'New posts first'},
-                    {value: 'desc', label: 'Old posts first'},
-                ]}/>
-            </div>
+        <div>
             <div className={postStyle.postsWrapper}>
                 {posts.map((post) => {
                     return (
@@ -46,6 +38,7 @@ export const Posts = () => {
                         </NavLink>
                     )
                 })}
+                <div><Button>Show more</Button></div>
             </div>
         </div>
     )
